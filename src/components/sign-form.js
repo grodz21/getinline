@@ -9,11 +9,11 @@ class SignInForm extends Component {
             <div className="col-sm-6">
               <form className="signForm">
                 <label>
-                  <input type="text" name="name" placeholder="name"/>
+                  <input type="text" name="firstname" placeholder="Last Name"/>
                 </label>
                 <br />
                 <label>
-                  <input type="text" name="lastname" placeholder="lastname"/>
+                  <input type="text" name="lastname" placeholder="First Name"/>
                 </label>
                 <br />
                 <select name="stylistList" form="signForm">
@@ -24,6 +24,11 @@ class SignInForm extends Component {
                 <br />
                 <br />
                 <input type="submit" value="Submit" />
+                <br />
+                <br />
+                <button onClick={(event)=> {
+                  this.setState({showForm: false})
+                }}>Cancel</button>
               </form>
             </div>
           </div>
